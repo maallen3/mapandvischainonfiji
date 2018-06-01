@@ -9,6 +9,10 @@ git clone https://github.com/maallen3/mapandvischainonfiji.git
 To run:
 
 cd mapandvischainonfiji/
+
+#if you are on fiji 
+#module load python/2.7.14/pandas
+
 python create_scipts_to_map_on_fiji_argparse.py infile.fastq outdir genome email
 
 For example:
