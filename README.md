@@ -19,11 +19,8 @@ For example:
 
 python create_scipts_to_map_on_fiji_argparse.py /scratch/Users/allenma/171025_NB501447_0179_fastq/Allen_Dowell-371/MA_DMSO_Groseq_S7_R1_001.fastq /Users/allenma/proseq/ hg19 allenma@colorado.edu
 
-For more options type
-python create_scipts_to_map_on_fiji_argparse.py --help
-
-You can turn off the auto submit like this.
-python create_scipts_to_map_on_fiji_argparse.py infile <outdir> <genome> <email> --Turnoff_submit
+The output will be these directories in your outdir. 
+bams  bedgraphs  cutadapt  e_and_o  qsubscripts  qual  sams  sortedbams  tdfs
 
 By default this script will create 5 slurm scripts and submit them all to the queue.
 infilerootname._mom_run.slurm #this script runs all the other scripts
@@ -32,7 +29,15 @@ infilerootname._map_.slurm #this script maps with bowtie2
 infilerootname._samtobam.slurm #this script changes sams into bam files
 infilerootname._bamtobedgraph.slurm #this script creates normalized tdf files
 
-If you turn on --flipreads one other script will be created. 
+
+
+For more options type
+python create_scipts_to_map_on_fiji_argparse.py --help
+
+You can turn off the auto submit like this.
+python create_scipts_to_map_on_fiji_argparse.py infile outdir genome email --Turnoff_submit
+
+If you turn on --flipreads one other script will be created and run. 
 
 
 
